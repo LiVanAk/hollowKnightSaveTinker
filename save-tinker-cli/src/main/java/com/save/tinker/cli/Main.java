@@ -6,7 +6,7 @@ import java.io.InputStream;
 
 public class Main {
     public static void main(String[] args) {
-        String fileName = args.length > 0 ? args[0] : "dat/test_random.dat";
+        String fileName = args.length > 0 ? args[0] : "dat/save.dat";
         InputStream stream = Main.class.getClassLoader().getResourceAsStream(fileName);
 
         if (stream == null) {
