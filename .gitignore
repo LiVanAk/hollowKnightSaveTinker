@@ -51,4 +51,4 @@ bin/
 
 # DO NOT ignore example versions
 !**/application-example.properties
-/.idea/
+/.idea
