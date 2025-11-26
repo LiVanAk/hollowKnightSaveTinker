@@ -1,4 +1,4 @@
-package com.save.tinker.core.parser;
+package com.save.tinker.core.parser.io;
 
 import lombok.Builder;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.save.tinker.core.parser;
+package com.save.tinker.core.parser.io;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
