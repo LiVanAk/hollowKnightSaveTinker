@@ -40,3 +40,13 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Manual configuration ###
+/save-tinker-cli/src/main/resources/dat/
+
+# ====== Sensitive configs ======
+# Ignore all application.properties in all modules
+**/application.properties
+
+# DO NOT ignore example versions
+!**/application-example.properties
