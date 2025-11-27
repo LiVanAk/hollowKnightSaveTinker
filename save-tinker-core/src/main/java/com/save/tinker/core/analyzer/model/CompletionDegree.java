@@ -13,7 +13,7 @@ public class CompletionDegree {
      * 主体完成度，上限为100%
      */
 
-    // 能力，每个占有2%完成度，共14%
+    // 装备，对应能力，每个占有2%完成度，共14%
     private int equipmentsCount;
     private final int equipmentsMax = 14;
 
