@@ -57,7 +57,7 @@ public class PlayerData {
     @SerializedName("hornetOutskirtsDefeated") private boolean hornetOutskirtsDefeated;     // 岗哨大黄蜂，再战
 
     // ★ 战士之梦
-    @SerializedName("killedGhostAladar") private boolean killedGhostAladar;                 // 击败戈布（？）
+    @SerializedName("killedGhostAladar") private boolean killedGhostAladar;                 // 击败戈布（戈布曾以其支持者的名字命名为 Aladar，游戏文件中也有时这样称呼他）
     @SerializedName("killedGhostXero") private boolean killedGhostXero;                     // 击败泽若
     @SerializedName("killedGhostHu") private boolean killedGhostHu;                         // 击败胡长老
     @SerializedName("killedGhostMarmu") private boolean killedGhostMarmu;                   // 击败马尔穆
