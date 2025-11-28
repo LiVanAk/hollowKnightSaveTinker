@@ -48,7 +48,8 @@ public class PlayerData {
     @SerializedName("mothDeparted") private boolean mothDeparted;           // 聆听先知的遗言，2400精华
 
     // Bosses【好难找。。】
-    @SerializedName("falseKnightDefeated") private boolean falseKnightDefeated;             // 假骑士
+    @SerializedName("killedDungDefender") private boolean killedDungDefender;               // 粪虫防御者
+    @SerializedName("killedFalseKnight") private boolean killedFalseKnight;                 // 假骑士
     @SerializedName("killedMawlek") private boolean killedMawlek;                           // 躁郁的毛里克
     @SerializedName("killedJarCollector") private boolean killedJarCollector;               // 收藏家
     @SerializedName("killedTraitorLord") private boolean killedTraitorLord;                 // 叛徒领主
