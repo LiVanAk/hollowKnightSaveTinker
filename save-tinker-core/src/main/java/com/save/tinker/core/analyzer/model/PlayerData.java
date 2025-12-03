@@ -49,15 +49,18 @@ public class PlayerData {
 
     // Bosses【好难找。。】
     @SerializedName("killedFalseKnight") private boolean killedFalseKnight;                 // 假骑士
-    @SerializedName("killedBigBuzzer") private boolean killedBigBuzzer;                     // 格鲁兹之母（这个名字好奇怪。。）
+    @SerializedName("killedBigBuzzer") private boolean killedBigFly;                        // 格鲁兹之母（这个名字好奇怪。。）
     @SerializedName("killedMawlek") private boolean killedMawlek;                           // 躁郁的毛里克
     @SerializedName("killedJarCollector") private boolean killedJarCollector;               // 收藏家
     @SerializedName("killedMantisLord") private boolean killedMantisLord;                   // 螳螂领主，三螳螂
     @SerializedName("killedTraitorLord") private boolean killedTraitorLord;                 // 叛徒领主
     @SerializedName("killedMageLord") private boolean killedMageLord;                       // 灵魂大师
-    @SerializedName("killedBlackKnight") private boolean killedBlackKnight;                 // 守望者骑士（不确定和守望者骑士团的关系，修改后会影响完成度，因此不确定完成度关注的是否是打完六喜丸子）
+    @SerializedName("killedMegaJellyfish") private boolean killedMegaJellyfish;             // 乌姆
+    @SerializedName("killedInfectedKnight") private boolean killedInfectedKnight;           // 残破容器
+    @SerializedName("killedMimicSpider") private boolean killedMimicSpider;                 // 诺斯克（就你叫模仿者蛛（mimic spider）是吧）
+    @SerializedName("killedBlackKnight") private boolean killedBlackKnight;                 // 守望者骑士
     @SerializedName("killedDungDefender") private boolean killedDungDefender;               // 粪虫防御者
-    @SerializedName("hornet1Defeated") private boolean killedHornet;                        // 守护者大黄蜂，初见
+    @SerializedName("hornet1Defeated") private boolean hornet1Defeated;                     // 守护者大黄蜂，初见
     @SerializedName("hornetOutskirtsDefeated") private boolean hornetOutskirtsDefeated;     // 岗哨大黄蜂，再战
 
     // ★ 战士之梦
@@ -78,8 +81,9 @@ public class PlayerData {
      * 内容包，游戏后续更新新增内容
      */
     // ★ 格林剧团
-    @SerializedName("killedGrimm") private boolean killedGrimm;                     // 击败格林团长
-    @SerializedName("killedNightmareGrimm") private boolean killedNightmareGrimm;   // 击败梦魇之王格林
+    @SerializedName("killedGrimm") private boolean killedGrimm;                             // 击败格林团长
+    @SerializedName("killedNightmareGrimm") private boolean killedNightmareGrimm;           // 击败梦魇之王格林
+    @SerializedName("destroyedNightmareLantern") private boolean destroyedNightmareLantern; // 摧毁梦魇之灯，放逐格林剧团
 
     // ★ 生命血（更新了蜂巢和蓝血）
     @SerializedName("killedHiveKnight") private boolean killedHiveKnight;   // 击败蜂巢骑士
