@@ -1,7 +1,6 @@
 package com.save.tinker.core.parser.transform;
 
 import com.google.gson.Gson;
-import com.save.tinker.core.analyzer.model.CompletionDegree;
 import com.save.tinker.core.analyzer.model.JsonSaveFile;
 
 public class JsonParserUtil {

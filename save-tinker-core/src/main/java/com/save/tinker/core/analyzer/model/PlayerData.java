@@ -1,6 +1,8 @@
 package com.save.tinker.core.analyzer.model;
 
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.google.gson.annotations.SerializedName;
+import com.save.tinker.core.analyzer.model.sub.Equipments;
 import lombok.Data;
 
 @Data
@@ -9,13 +11,8 @@ public class PlayerData {
      * 主体包，游戏首发内容
      */
     // ★ 能力，在获得装备后获取相应能力
-    @SerializedName("hasDash") private boolean hasDash;                     // 冲刺，获得蛾翼披风
-    @SerializedName("hasWalljump") private boolean hasWalljump;             // 攀墙跳，获得螳螂爪
-    @SerializedName("hasDoubleJump") private boolean hasDoubleJump;         // 二段跳，获得帝王之翼
-    @SerializedName("hasSuperDash") private boolean hasSuperDash;           // 超冲，获得水晶之心
-    @SerializedName("hasShadowDash") private boolean hasShadowDash;         // 黑冲，获得暗影披风
-    @SerializedName("hasAcidArmour") private boolean hasAcidArmour;         // 酸泳，获得伊思玛的眼泪
-    @SerializedName("hasCrystalHeart") private boolean hasKingsBrand;       // 进深渊，获得王之印记
+    @JsonUnwrapped
+    private Equipments equipments;
 
     // ★ 法术
     @SerializedName("fireballLevel") private int fireballLevel;     // 0：未获得；1：复仇之魂，白波；2：暗影之魂，黑波

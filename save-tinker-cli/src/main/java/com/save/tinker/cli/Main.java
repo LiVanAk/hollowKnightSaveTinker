@@ -1,12 +1,12 @@
 package com.save.tinker.cli;
 
-import com.save.tinker.core.analyzer.model.CompletionDegree;
-import com.save.tinker.core.analyzer.model.JsonSaveFile;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.save.tinker.core.analyzer.model.PlayerData;
 import com.save.tinker.core.parser.io.SaveLoader;
 import com.save.tinker.core.parser.io.FileExporter;
-import com.save.tinker.core.parser.transform.JsonParserUtil;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Objects;
 
@@ -30,9 +30,14 @@ public class Main {
                     .build();
             fileExporter.exportToJson();
 
-            JsonSaveFile jsonSaveFile = JsonParserUtil.parse(json);
-            PlayerData playerData = jsonSaveFile.getPlayerData();
-            System.out.println(playerData);
+            ObjectMapper objectMapper = new ObjectMapper();
+            try {
+                JsonParser jsonParser = objectMapper.getFactory().createParser(json);
+                PlayerData playerData = objectMapper.readValue(jsonParser, PlayerData.class);
+                System.out.println(playerData);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }
