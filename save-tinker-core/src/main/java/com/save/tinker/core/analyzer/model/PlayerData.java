@@ -1,8 +1,17 @@
 package com.save.tinker.core.analyzer.model;
 
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
-import com.google.gson.annotations.SerializedName;
+import com.save.tinker.core.analyzer.model.sub.Bosses;
+import com.save.tinker.core.analyzer.model.sub.Charms;
+import com.save.tinker.core.analyzer.model.sub.FoolsColosseum;
+import com.save.tinker.core.analyzer.model.sub.GrimAndHive;
+import com.save.tinker.core.analyzer.model.sub.NailAbout;
+import com.save.tinker.core.analyzer.model.sub.Dreamers;
 import com.save.tinker.core.analyzer.model.sub.Equipments;
+import com.save.tinker.core.analyzer.model.sub.Fragments;
+import com.save.tinker.core.analyzer.model.sub.GodHome;
+import com.save.tinker.core.analyzer.model.sub.Spells;
+import com.save.tinker.core.analyzer.model.sub.WarriorDreams;
 import lombok.Data;
 
 @Data
@@ -10,94 +19,39 @@ public class PlayerData {
     /**
      * 主体包，游戏首发内容
      */
-    // ★ 能力，在获得装备后获取相应能力
     @JsonUnwrapped
-    private Equipments equipments;
+    private Equipments equipments;      // ★ 能力，在获得装备后获取相应能力
 
-    // ★ 法术
-    @SerializedName("fireballLevel") private int fireballLevel;     // 0：未获得；1：复仇之魂，白波；2：暗影之魂，黑波
-    @SerializedName("screamLevel") private int screamLevel;         // 0：未获得；1：嚎叫幽灵，白吼；2：深渊尖啸，黑吼
-    @SerializedName("quakeLevel") private int quakeLevel;           // 0：未获得；1：荒芜俯冲，白砸；2：黑暗降临，黑砸
+    @JsonUnwrapped
+    private Spells spells;              // ★ 法术
 
-    // ★ 面具碎片 / 容器碎片  （仅能查看当前拥有的碎片数量）
-    @SerializedName("heartPieces") private int heartPieces;
-    @SerializedName("vesselFragments") private int vesselFragments;
+    @JsonUnwrapped
+    private Fragments fragments;        // ★ 面具碎片 / 容器碎片
 
-    // ★ 护符，主体包共36个护符，后续更新内容包新增4个护符，共40个护符，5个可升级或变化的护符
-    @SerializedName("charmsOwned") private int charmsOwned;
+    @JsonUnwrapped
+    private Charms charms;              // ★ 护符
 
-    // ★ 骨钉技艺
-    @SerializedName("hasDashSlash") private boolean hasDashSlash;       // 强力劈砍，向骨钉大师席奥学习
-    @SerializedName("hasCyclone") private boolean hasCyclone;           // 旋风劈砍，向骨钉大师马托学习
-    @SerializedName("hasUpwardSlash") private boolean hasUpwardSlash;   // 冲刺劈砍，向骨钉大师奥罗学习
+    @JsonUnwrapped
+    private Dreamers dreamers;          // ★ 守梦者
 
-    // ★ 骨钉升级
-    @SerializedName("nailSmithUpgrades") private int nailSmithUpgrades; // 骨钉共需升级4次
+    @JsonUnwrapped
+    private NailAbout nailAbout;        // ★ 骨钉等级，骨钉技艺和梦之钉
 
-    // ★ 守梦者
-    @SerializedName("lurienDefeated") private boolean lurienDefeated;   // 守望者卢瑞恩
-    @SerializedName("monomonDefeated") private boolean monomonDefeated; // 教师莫诺蒙
-    @SerializedName("hegemolDefeated") private boolean hegemolDefeated; // 野兽赫拉
+    @JsonUnwrapped
+    private Bosses bosses;
 
-    // ★ 梦之钉
-    @SerializedName("hasDreamNail") private boolean hasDreamNail;           // 获得梦之钉
-    @SerializedName("dreamNailUpgraded") private boolean dreamNailUpgraded; // 觉醒梦之钉，获得1800精华后与先知对话后觉醒
-    @SerializedName("mothDeparted") private boolean mothDeparted;           // 聆听先知的遗言，获得2400精华后与先知对话后完成，先知升天
+    @JsonUnwrapped
+    private WarriorDreams warriorDreams;    // ★ 战士之梦
 
-    // Bosses【好难找。。】
-    @SerializedName("killedFalseKnight") private boolean killedFalseKnight;                 // 假骑士
-    @SerializedName("killedBigBuzzer") private boolean killedBigFly;                        // 格鲁兹之母（这个名字好奇怪。。）
-    @SerializedName("killedMawlek") private boolean killedMawlek;                           // 躁郁的毛里克
-    @SerializedName("killedJarCollector") private boolean killedJarCollector;               // 收藏家
-    @SerializedName("killedMantisLord") private boolean killedMantisLord;                   // 螳螂领主，三螳螂
-    @SerializedName("killedTraitorLord") private boolean killedTraitorLord;                 // 叛徒领主
-    @SerializedName("killedMageLord") private boolean killedMageLord;                       // 灵魂大师
-    @SerializedName("killedMegaJellyfish") private boolean killedMegaJellyfish;             // 乌姆
-    @SerializedName("killedInfectedKnight") private boolean killedInfectedKnight;           // 残破容器
-    @SerializedName("killedMimicSpider") private boolean killedMimicSpider;                 // 诺斯克（就你叫模仿者蛛（mimic spider）是吧）
-    @SerializedName("killedBlackKnight") private boolean killedBlackKnight;                 // 守望者骑士
-    @SerializedName("killedDungDefender") private boolean killedDungDefender;               // 粪虫防御者
-    @SerializedName("hornet1Defeated") private boolean hornet1Defeated;                     // 守护者大黄蜂，初见
-    @SerializedName("hornetOutskirtsDefeated") private boolean hornetOutskirtsDefeated;     // 岗哨大黄蜂，再战
-
-    // ★ 战士之梦
-    @SerializedName("killedGhostAladar") private boolean killedGhostAladar;                 // 击败戈布（戈布曾以其支持者的名字命名为Aladar，游戏文件中也有时这样称呼他，真难找啊hhhh）
-    @SerializedName("killedGhostXero") private boolean killedGhostXero;                     // 击败泽若
-    @SerializedName("killedGhostHu") private boolean killedGhostHu;                         // 击败胡长老
-    @SerializedName("killedGhostMarmu") private boolean killedGhostMarmu;                   // 击败马尔穆
-    @SerializedName("killedGhostNoEyes") private boolean killedGhostNoEyes;                 // 击败无眼
-    @SerializedName("killedGhostMarkoth") private boolean killedGhostMarkoth;               // 击败马科斯
-    @SerializedName("killedGhostGalien") private boolean killedGhostGalien;                 // 击败加利安
-
-    // ★ 愚人斗兽场
-    @SerializedName("colosseumBronzeCompleted") private boolean colosseumBronzeCompleted;   // 勇士的试炼（竞技场1）
-    @SerializedName("colosseumSilverCompleted") private boolean colosseumSilverCompleted;   // 征服者的试炼（竞技场2）
-    @SerializedName("colosseumGoldCompleted") private boolean colosseumGoldCompleted;       // 愚人的试炼（竞技场3）
+    @JsonUnwrapped
+    private FoolsColosseum foolsColosseum;  // ★ 愚人斗兽场
 
     /**
      * 内容包，游戏后续更新新增内容
      */
-    // ★ 格林剧团
-    @SerializedName("killedGrimm") private boolean killedGrimm;                             // 击败格林团长
-    @SerializedName("killedNightmareGrimm") private boolean killedNightmareGrimm;           // 击败梦魇之王格林
-    @SerializedName("destroyedNightmareLantern") private boolean destroyedNightmareLantern; // 摧毁梦魇之灯，放逐格林剧团
+    @JsonUnwrapped
+    private GrimAndHive grimAndHive;        // ★ 格林剧团 / 蜂巢
 
-    // ★ 生命血（更新了蜂巢和蓝血）
-    @SerializedName("killedHiveKnight") private boolean killedHiveKnight;   // 击败蜂巢骑士
-
-    // ★ 神居
-    @SerializedName("hasGodfinder") private boolean hasGodfinder;                       // 获取神明调谐器
-    @SerializedName("bossDoorStateTier1") private BossDoorState bossDoorStateTier1;     // 大师万神殿，第一扇门连战
-    @SerializedName("bossDoorStateTier2") private BossDoorState bossDoorStateTier2;     // 艺术家万神殿，第二扇门连战
-    @SerializedName("bossDoorStateTier3") private BossDoorState bossDoorStateTier3;     // 贤者万神殿，第三扇门连战
-    @SerializedName("bossDoorStateTier4") private BossDoorState bossDoorStateTier4;     // 骑士万神殿，第四扇门连战
-
-    @Data
-    public static class BossDoorState {
-        @SerializedName("completed")
-        private boolean completed;
-
-        @SerializedName("unlocked")
-        private boolean unlocked;
-    }
+    @JsonUnwrapped
+    private GodHome godHome;                // ★ 神居
 }

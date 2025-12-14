@@ -1,11 +1,10 @@
-package com.save.tinker.core.analyzer.model;
+package com.save.tinker.core.analyzer.service;
 
+import com.save.tinker.core.analyzer.model.PlayerData;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
