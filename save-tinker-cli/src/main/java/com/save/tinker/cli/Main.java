@@ -1,11 +1,9 @@
 package com.save.tinker.cli;
 
-import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.save.tinker.core.analyzer.model.JsonSaveFile;
 import com.save.tinker.core.analyzer.model.PlayerData;
-import com.save.tinker.core.analyzer.model.sub.Bosses;
 import com.save.tinker.core.analyzer.model.sub.Equipments;
 import com.save.tinker.core.parser.io.SaveLoader;
 import com.save.tinker.core.parser.io.FileExporter;
