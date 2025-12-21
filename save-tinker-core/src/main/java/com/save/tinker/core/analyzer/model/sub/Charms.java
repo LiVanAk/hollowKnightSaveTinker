@@ -111,85 +111,85 @@ public class Charms extends Abstract {
     public String getName(String key) {
         switch (key) {
             case "gotCharm_1":
-                return "魔法之盾";
+                return "蜂群集结";
             case "gotCharm_2":
-                return "魔法之盾";
+                return "任性的指南针";
             case "gotCharm_3":
-                return "魔法之盾";
+                return "幼虫之歌";
             case "gotCharm_4":
-                return "魔法之盾";
+                return "坚硬外壳";
             case "gotCharm_5":
-                return "魔法之盾";
+                return "巴德尔之壳";
             case "gotCharm_6":
-                return "魔法之盾";
+                return "亡者之怒";
             case "gotCharm_7":
-                return "魔法之盾";
+                return "快速聚集";
             case "gotCharm_8":
-                return "魔法之盾";
+                return "生命血之心";
             case "gotCharm_9":
-                return "魔法之盾";
+                return "生命血核心";
             case "gotCharm_10":
-                return "魔法之盾";
+                return "防御者纹章";
             case "gotCharm_11":
-                return "魔法之盾";
+                return "吸虫之巢";
             case "gotCharm_12":
-                return "魔法之盾";
+                return "苦痛荆棘";
             case "gotCharm_13":
-                return "魔法之盾";
+                return "骄傲印记";
             case "gotCharm_14":
-               return "魔法之盾";
+                return "稳定之体";
             case "gotCharm_15":
-                return "魔法之盾";
+                return "沉重之击";
             case "gotCharm_16":
-                return "魔法之盾";
+                return "锋利之影";
             case "gotCharm_17":
-                return "魔法之盾";
+                return "蘑菇孢子";
             case "gotCharm_18":
-                return "魔法之盾";
+                return "修长之钉";
             case "gotCharm_19":
-                return "魔法之盾";
+                return "萨满之石";
             case "gotCharm_20":
-                return "魔法之盾";
+                return "灵魂捕手";
             case "gotCharm_21":
-                return "魔法之盾";
+                return "噬魂者";
             case "gotCharm_22":
-                return "魔法之盾";
+                return "发光子宫";
             case "gotCharm_23":
-                return "魔法之盾";
+                return "易碎心脏";
             case "gotCharm_24":
-                return "魔法之盾";
+                return "易碎贪婪";
             case "gotCharm_25":
-                return "魔法之盾";
+                return "易碎力量";
             case "gotCharm_26":
-                return "魔法之盾";
+                return "骨钉大师的荣耀";
             case "gotCharm_27":
-                return "魔法之盾";
+                return "乔尼的祝福";
             case "gotCharm_28":
-                return "魔法之盾";
+                return "乌恩之形";
             case "gotCharm_29":
-                return "魔法之盾";
+                return "蜂巢之血";
             case "gotCharm_30":
-                return "魔法之盾";
+                return "舞梦者";
             case "gotCharm_31":
-                return "魔法之盾";
+                return "冲刺大师";
             case "gotCharm_32":
-                return "魔法之盾";
+                return "快速劈砍";
             case "gotCharm_33":
-                return "魔法之盾";
+                return "法术扭曲者";
             case "gotCharm_34":
-                return "魔法之盾";
+                return "深度聚集";
             case "gotCharm_35":
-                return "魔法之盾";
+                return "蜕变挽歌";
             case "gotCharm_36":
-                return "魔法之盾";
+                return "国王之魂";
             case "gotCharm_37":
-                return "魔法之盾";
+                return "飞毛腿";
             case "gotCharm_38":
-                return "魔法之盾";
+                return "梦之盾";
             case "gotCharm_39":
-                return "魔法之盾";
+                return "编织者之歌";
             case "gotCharm_40":
-                return "魔法之盾";
+                return "格林之子";
             default:
                 return "";
         }

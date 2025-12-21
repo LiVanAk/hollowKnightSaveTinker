@@ -15,7 +15,7 @@ import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
-        String fileName = args.length > 0 ? args[0] : "dat/save.dat";
+        String fileName = args.length > 0 ? args[0] : "dat/user4.dat";
         InputStream stream = Main.class.getClassLoader().getResourceAsStream(fileName);
 
         if (stream == null) {
